@@ -9,33 +9,42 @@ Columns: 62 (61 features + 1 target variable)
 Target Variable: Class (Binary: 0 = "Bad", 1 = "Good")
 
 Variable Types
+
 Numerical Variables (7):
-Duration
-Amount
-InstallmentRatePercentage
-ResidenceDuration
-Age
-NumberExistingCredits
+Duration, 
+Amount, 
+InstallmentRatePercentage, 
+ResidenceDuration, 
+Age, 
+NumberExistingCredits, 
 NumberPeopleMaintenance
+
 Categorical Variables (55):
 Includes binary encoded features such as:
-Telephone
-ForeignWorker
-CheckingAccountStatus categories
-CreditHistory categories
-Purpose categories
+Telephone,
+ForeignWorker,
+CheckingAccountStatus categories,
+CreditHistory categories,
+Purpose categories,
 And many others
 
 Data Issues
 Two categorical columns (Personal.Female.Single and Purpose.Vacation) contain only one class and carry no variance. These should ideally be removed but were retained in this analysis.
 
 Models Implemented
-Logistic Regression
+
+Logistic Regression:
+
 Used as a baseline model for binary classification.
+
 Features were used without one-hot encoding (all variables are numerical or pre-encoded).
+
 Predictions were made with different probability thresholds (0.2, 0.35, 0.5) to analyze performance metrics.
+
 CatBoost (Suggested)
+
 Recommended for future work due to the high number of categorical variables.
+
 CatBoost handles categorical features natively and is well-suited for this type of data.
 
 Key Steps
