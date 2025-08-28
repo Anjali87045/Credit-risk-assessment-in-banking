@@ -28,26 +28,26 @@ CreditHistory categories,
 Purpose categories,
 And many others
 
-Data Issues
+Data Issues: 
 Two categorical columns (Personal.Female.Single and Purpose.Vacation) contain only one class and carry no variance. These should ideally be removed but were retained in this analysis.
 
-Models Implemented
+Models Implemented:
 
 Logistic Regression:
 
-Used as a baseline model for binary classification.
+  Used as a baseline model for binary classification.
 
-Features were used without one-hot encoding (all variables are numerical or pre-encoded).
+  Features were used without one-hot encoding (all variables are numerical or pre-encoded).
 
-Predictions were made with different probability thresholds (0.2, 0.35, 0.5) to analyze performance metrics.
+  Predictions were made with different probability thresholds (0.2, 0.35, 0.5) to analyze performance metrics.
 
-CatBoost (Suggested)
+CatBoost (Suggested):
 
-Recommended for future work due to the high number of categorical variables.
+  Recommended for future work due to the high number of categorical variables.
 
-CatBoost handles categorical features natively and is well-suited for this type of data.
+  CatBoost handles categorical features natively and is well-suited for this type of data.
 
-Key Steps
+Key Steps:
 Data Loading and Exploration
 
 Loaded the dataset and examined its structure.
@@ -66,7 +66,7 @@ Generated predicted probabilities for the positive class.
 
 
 
-Performance Evaluation
+Performance Evaluation:
 
 Created confusion matrices for different probability thresholds.
 
@@ -75,7 +75,7 @@ Calculated True Positive Rate (TPR), False Positive Rate (FPR), and Accuracy for
 Generated an ROC curve to visualize model performance.
 
 
-Results
+Results:
 Logistic Regression Performance:
 Threshold = 0.2:
 
@@ -101,15 +101,15 @@ FPR: 0.477
 
 Accuracy: 0.786
 
-Dependencies
-Python 3.x
+Dependencies: 
+Python 3.x 
 Libraries:
-numpy
+numpy,
 
-pandas
+pandas,
 
-matplotlib
+matplotlib,
 
-seaborn
+seaborn,
 
-scikit-learn
+scikit-learn,
